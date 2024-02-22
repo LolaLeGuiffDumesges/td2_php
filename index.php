@@ -35,7 +35,7 @@ $heredoc = <<< TEXT
 // mettre en majuscule la première lettre de tous les mots 
 $resultat = ucwords($heredoc);
 
-
+// déclaration du tableau
 $notes = array(15, 13, 8, 10, 17);
 $matieres = array('html/css', 'algorithmique', 'anglais', 'marketing', 'ui/ux');
 // correction du tableau
