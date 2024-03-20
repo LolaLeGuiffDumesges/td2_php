@@ -41,6 +41,7 @@ $matieres = array('html/css', 'algorithmique', 'anglais', 'marketing', 'ui/ux');
 // correction du tableau
 $replacements = ['algorithmique' => 10, 'marketing' => 13];
 
+
 // Récupérer l'index de la dernière évaluation
 $r_notes = count($notes) - 1;
 
@@ -54,6 +55,34 @@ $table = array ('html/css' => 15 , 'algorithmique' => 13, 'anglais' => 8, 'marke
 
 $newResults = array_replace($table, $replacements); // Fonction permettant de changer de place de plusieurs variables dans un tableau
 $table = array_combine($matieres, $notes); // Permet de combiner 2 tableaux en 1
+
+
+// stocker les notes de plusieurs étudiants
+$students = [
+    'Loris' => [
+        'html/css' => 15,
+        'algo' => 10,
+        'anglais' => 20,
+    ],
+    'Evans' => [
+        'html/css' => 19,
+        'algo' => 5,
+        'anglais' => 10,
+    ],
+    'Nicolas' => [
+        'html/css' => 12,
+        'algo' => 17,
+        'anglais' => 12,
+    ],
+    'Matthias' => [
+        'html/css' => 13,
+        'algo' => 10,
+        'anglais' => 15,
+    ],
+]
+
+
+
 
 ?>
 
@@ -83,6 +112,9 @@ $table = array_combine($matieres, $notes); // Permet de combiner 2 tableaux en 1
     <p><?= print_r ($table) ?></p>
     <h2>Tableau avec le remplacement </h2>
     <p><?= print_r ($newResults) ?></p>
+    <h2>stocker les notes de plusieurs étudiants</h2>
+    <p><?= print_r($students) ?></p>
+    <p><?= $students['Loris']['anglais'] ?></p>
 </body>
 
 </html>
